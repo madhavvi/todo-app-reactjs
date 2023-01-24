@@ -1,0 +1,90 @@
+.Product {
+    display: flex;
+    margin: 10px auto;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  
+  .Product-task {
+    position: relative;
+    transition: opacity 0.4s linear;
+  }
+  
+  .Product-task.completed {
+    opacity: 0.6;
+  }
+  
+  .Product-task.completed:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -0.5rem;
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    animation: strikeitem 0.5s ease-out 0s forwards;
+  }
+  
+  @keyframes strikeitem {
+    to {
+      width: calc(100% + 1rem);
+    }
+  }
+  
+  .Product-buttons button {
+    border: none;
+    font-size: 18px;
+    margin: 0.2rem 0.4em;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .Product-edit-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .Product-edit-form label {
+    min-width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .Product-edit-form input {
+    flex-grow: 1;
+    border: none;
+    background: #f7f1f1;
+    padding: 0 1.5em;
+    font-size: initial;
+    border-radius: 3px;
+  }
+  
+  .Product-edit-form button {
+    padding: 0 1.3rem;
+    border: none;
+    background: #36515e;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+    cursor: pointer;
+    transform: background 0.2s ease-out;
+    border-radius: 4px;
+  }
+  
+  .Product-edit-form button:hover {
+    background: #253c48;
+  }
+  
+  .Product-edit-form input,
+  .Product-edit-form button {
+    font-family: "Quicksand", sans-serif;
+    height: 3rem;
+  }
+  
